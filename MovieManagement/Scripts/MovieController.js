@@ -16,6 +16,7 @@
 
     $scope.DeleteRow = function(entity){
         var index = $scope.movies.map(function(m) { return m['Id']; }).indexOf(entity.Id);
+
         $scope.Delete(entity.Id, index);
     };
 

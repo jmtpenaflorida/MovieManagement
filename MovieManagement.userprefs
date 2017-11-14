@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{9F3E81A5-3E32-43C2-9A96-0FD01A761081}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/Angular.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/readme.txt">
     <Files>
-      <File FileName="MovieManagement/Angular.html" Line="8" Column="74" />
-      <File FileName="MovieManagement/Scripts/MovieController.js" Line="17" Column="24" />
+      <File FileName="MovieManagement/Angular.html" Line="27" Column="17" />
+      <File FileName="MovieManagement/Scripts/MovieController.js" Line="14" Column="10" />
       <File FileName="MovieManagement/Controllers/MovieController.cs" Line="38" Column="13" />
-      <File FileName="MovieManagement/Scripts/Common.js" Line="1" Column="79" />
+      <File FileName="MovieManagement/Scripts/Common.js" Line="10" Column="1" />
       <File FileName="MovieManagement/Models/Movie.cs" Line="12" Column="35" />
-      <File FileName="MovieManagement/Content/main.css" Line="5" Column="1" />
+      <File FileName="MovieManagement/Content/main.css" Line="2" Column="1" />
+      <File FileName="MovieManagement/readme.txt" Line="1" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
