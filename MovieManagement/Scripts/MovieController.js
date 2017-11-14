@@ -10,14 +10,12 @@
             { field: "Title", name: "Movie Title"},
             { field: "YearReleased", name:  "Year Released"},
             { field: "Rating" },
-            { field: "Delete", enableFiltering: false, cellEditableCondition: false, cellTemplate: '<button style="width: 100%" ng-click="grid.appScope.DeleteRow(row.entity)">Delete</button>' }
+            { field: "Delete", enableFiltering: false, cellEditableCondition: false, cellTemplate: '<button style="width: 100%" ng-click="grid.appScope.Delete(row.entity.Id, grid.appScope.GetMovieIndex(row.entity))">Delete</button>' }
         ]
     };
 
-    $scope.DeleteRow = function(entity){
-        var index = $scope.movies.map(function(m) { return m['Id']; }).indexOf(entity.Id);
-
-        $scope.Delete(entity.Id, index);
+    $scope.GetMovieIndex = function(entity){
+        return $scope.movies.map(function(m) { return m['Id']; }).indexOf(entity.Id);
     };
 
     $scope.Save = function (form) {
