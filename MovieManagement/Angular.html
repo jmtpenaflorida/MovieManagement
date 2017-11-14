@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="content\loading-bar.min.css" type="text/css" media="all" />
+    <link rel="styleSheet" href="content\ui-grid.min.css" />
+    <link rel="styleSheet" href="content\main.css" />
+    <script type="text/javascript" src="scripts\loading-bar.min.js"></script>
+    <script type="text/javascript" src="scripts\ui-grid.min.js"></script>
+    <script type="text/javascript" src="scripts\Common.js"></script>
+    <script type="text/javascript" src="scripts\Directives.js"></script>
+    <script type="text/javascript" src="scripts\MovieController.js"></script>
+</head>
+<body ng-app="movieApp">
+    <div ng-controller="movieController">
+        <input id="txtSearch" type="text" ng-model="txtSearch" />
+        <table>
+            <tr><td>Id</td><td>Movie Title</td><td>Year Released</td><td>Rating</td></tr>
+            <tr ng-repeat="movie in movies | filter: txtSearch | orderBy:'Id'">
+                <td>{{movie.Id}}</td>
+                <td>{{movie.Title}}</td>
+                <td>{{movie.YearReleased}}</td>
+                <td>{{movie.Rating}}</td>
+                <td><input id="btnDelete" type="button" value="Delete" ng-click="Delete(movie.Id, $index)" /></td>
+            </tr>
+        </table>
+
+        <div ui-grid="grdMovies" class="grid" ui-grid-auto-resize></div>
+
+        <form name="form" role="form" novalidate>
+            <table>
+                <tr>
+                    <td>Title:</td>
+                    <td><input id="txtTitle" name="txtTitle" type="text" ng-model="Title" required=""/></td>
+                    <td><div ng-show="form.$submitted || form.txtTitle.$touched">
+                            <div style="color:red" ng-show="form.txtTitle.$error.required">*</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Year Released:</td>
+                    <td><input id="txtYearReleased" name="txtYearReleased" type="number" ng-model="YearReleased" min="1900" max="9999" required/></td>
+                    <td>
+                        <div ng-show="form.$submitted || form.txtYearReleased.$touched">
+                            <div style="color:red" ng-show="form.txtYearReleased.$error.required || form.txtYearReleased.$invalid">*</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rating:</td>
+                    <td>
+                        <select id="cboRating" name="cboRating" ng-model="Rating" required>
+                            <option></option>
+                            <option>G</option>
+                            <option>PG</option>
+                            <option>M</option>
+                            <option>MA</option>
+                            <option>R</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div ng-show="form.$submitted || form.cboRating.$touched">
+                            <div style="color:red" ng-show="form.cboRating.$error.required">*</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <input id="btnSave" type="submit" value="Save" ng-click="form.$valid && Save(form)" />
+        </form>
+    </div>
+</body>
+</html>
+

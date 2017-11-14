@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{9F3E81A5-3E32-43C2-9A96-0FD01A761081}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/Angular.html">
+    <Files>
+      <File FileName="MovieManagement/Angular.html" Line="8" Column="74" />
+      <File FileName="MovieManagement/Scripts/MovieController.js" Line="17" Column="24" />
+      <File FileName="MovieManagement/Controllers/MovieController.cs" Line="38" Column="13" />
+      <File FileName="MovieManagement/Scripts/Common.js" Line="1" Column="79" />
+      <File FileName="MovieManagement/Models/Movie.cs" Line="12" Column="35" />
+      <File FileName="MovieManagement/Content/main.css" Line="5" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MovieManagement PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
