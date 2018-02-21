@@ -148,3 +148,7 @@
 /Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/obj/Debug/MovieManagement.dll
 /Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/obj/Debug/MovieManagement.pdb
 /Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/obj/Debug/MovieManagement.csprojResolveAssemblyReference.cache
+/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/bin/System.Web.Cors.dll
+/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/bin/System.Web.Http.Cors.dll
+/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/bin/System.Net.Http.Formatting.xml
+/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/bin/System.Web.Http.Cors.xml
