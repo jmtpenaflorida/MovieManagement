@@ -3,22 +3,48 @@
     <head>
         <meta charset="utf-8" />
         <title></title>
-        <!--script src="https://cdn.jsdelivr.net/npm/vue"></script-->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
     </head>
     <body>
         <div id="app">
+            <input type="text" v-model="movieTitleSearch" />
             <table>
                 <tr><td>Id</td><td>Movie Title</td><td>Year Released</td><td>Rating</td></tr>
-                <tr v-for="movie in movies">
+                <tr v-for="movie in movies" v-if="!movieTitleSearch || movie.Title.includes(movieTitleSearch)">
                     <td>{{movie.Id}}</td>
                     <td>{{movie.Title}}</td>
                     <td>{{movie.YearReleased}}</td>
                     <td>{{movie.Rating}}</td>
+                    <td><input type="button" value="X" v-on:click="deleteMovie(movie)"/> <!--button @click="delete()">X</button--></td>
                 </tr>
             </table>
+
+            <table>
+                <tr>
+                    <td>Title:</td>
+                    <td><input id="txtTitle" name="txtTitle" type="text" v-model="movie.Title" required="" /></td>
+                </tr>
+                <tr>
+                    <td>Year Released:</td>
+                    <td><input id="txtYearReleased" name="txtYearReleased" type="number" v-model="movie.YearReleased" min="1900" max="9999" required /></td>
+                </tr>
+                <tr>
+                    <td>Rating:</td>
+                    <td>
+                        <select id="cboRating" name="cboRating" v-model="movie.Rating" required>
+                            <option></option>
+                            <option>G</option>
+                            <option>PG</option>
+                            <option>M</option>
+                            <option>MA</option>
+                            <option>R</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input id="btnSave" type="submit" value="Save" v-on:click="saveMovie()"  />
         </div>
     </body>
     <script type="text/javascript">
@@ -26,12 +52,31 @@
         var app = new Vue ({
             el: '#app',
             data: {
-                movies: null
+                movies: {},
+                movie: {},
+                movieTitleSearch: ''
             },
             methods:{
                 getMovies: function(){
                     this.$http.get(link).then(function(response){
                         this.movies = response.data;
+                    }, function(error){
+                        console.log(error.statusText);
+                    });
+                },
+                saveMovie: function(){
+                    this.$http.post(link, this.movie).then(function(response){
+                        this.movie.Id = response.data;
+                        this.movies.push(this.movie);
+                        this.movie = {};
+                    }, function(error){
+                        console.log(error.statusText);
+                    });
+                },
+                deleteMovie: function(movie){
+                    this.$http.delete('http://127.0.0.1:8080/api/movie?id=' + movie.Id).then(function(response){
+                        let movieIndex = this.movies.indexOf(movie);
+                        this.movies.splice(movieIndex, 1);
                     }, function(error){
                         console.log(error.statusText);
                     });
