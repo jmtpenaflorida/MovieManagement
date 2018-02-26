@@ -137,6 +137,30 @@
     <Reference Include="System.Web.Http.Cors">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.4\lib\net45\System.Web.Http.Cors.dll</HintPath>
     </Reference>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation">
+      <HintPath>..\packages\Unity.5.6.1\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -175,11 +199,17 @@
     </Compile>
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\MovieRepository.cs" />
+    <Compile Include="Services\MovieService.cs" />
+    <Compile Include="Services\IMovieService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
     <Folder Include="Scripts\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />

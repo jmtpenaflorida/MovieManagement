@@ -6,52 +6,33 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.EntityFrameworkCore;
 using MovieManagement.Models;
+using MovieManagement.Services;
 
 namespace MovieManagement.Controllers
 {
     public class MovieController : ApiController
     {
-        private DbContextOptions<MovieDBContext> options;
+        private MovieService _service;
 
-        public MovieController()
+        public MovieController(MovieService service)
         {
-            var builder = new DbContextOptionsBuilder<MovieDBContext>();
-            builder.UseInMemoryDatabase("MovieDB");
-            options = builder.Options;
+            _service = service;
         }
 
         public IEnumerable<Movie> GetAllMovies()
         {
-            using (var db = new MovieDBContext(options))
-            {
-                return db.Movies.ToList();
-            }
+            return _service.Get();
         }
 
         public int AddMovie(Movie movie)
         {
-            using (var db = new MovieDBContext(options))
-            {
-                db.Movies.Add(movie);
-                db.SaveChanges();
-            }
-
-            return movie.Id;
+            return _service.Add(movie);
         }
 
         [HttpDelete]
         public void DeleteMovie(int id)
         {
-            using (var db = new MovieDBContext(options))
-            {
-                var movie = db.Movies.FirstOrDefault<Movie>((m) => m.Id == id);
-
-                if (movie != null)
-                {
-                    db.Movies.Remove(movie);
-                    db.SaveChanges();
-                }
-            }
+           _service.Delete(id);
         }
     }
 }

@@ -8,6 +8,7 @@
 	<form id="form1" runat="server">
 		<asp:Button id="button1" runat="server" Text="Click me!" OnClick="button1Clicked" />
 	    <a href="Angular.html">Angular</a>
+        <a href="Vue.html">Vue</a>
 	</form>
 </body>
 </html>
