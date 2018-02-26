@@ -199,7 +199,7 @@
     </Compile>
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Controllers\MovieController.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IMovieRepository.cs" />
     <Compile Include="Repositories\MovieRepository.cs" />
     <Compile Include="Services\MovieService.cs" />
     <Compile Include="Services\IMovieService.cs" />

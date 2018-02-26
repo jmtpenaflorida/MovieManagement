@@ -20,13 +20,16 @@ namespace MovieManagement.Repositories
 
         public virtual TEntity Add(TEntity entity)
         {
-            return _context.Set<TEntity>().Add(entity) as TEntity;
+            var result = _context.Set<TEntity>().Add(entity) as TEntity;
+            SaveChanges();
+            return result;
         }
 
         public virtual void Delete(int id)
         {
             var item = _context.Set<TEntity>().Find(id);
             _context.Set<TEntity>().Remove(item);
+            SaveChanges();
         }
 
         public IQueryable<TEntity> Get()

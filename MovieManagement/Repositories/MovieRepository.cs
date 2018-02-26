@@ -21,10 +21,9 @@ namespace MovieManagement.Repositories
             _repository = new GenericRepository<Movie>(new MovieDBContext(options));
         }
 
-        int IMovieRepository.Add(Movie movie)
+        public int Add(Movie movie)
         {
             _repository.Add(movie);
-            _repository.SaveChanges();
 
             return movie.Id;
         }
@@ -32,7 +31,6 @@ namespace MovieManagement.Repositories
         public void Delete(int id)
         {
             _repository.Delete(id);
-            _repository.SaveChanges();
         }
 
         public IEnumerable<Movie> Get()
