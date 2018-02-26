@@ -21,6 +21,11 @@ namespace MovieManagement.Repositories
             _repository = new GenericRepository<Movie>(new MovieDBContext(options));
         }
 
+        public MovieRepository(DbContextOptions<MovieDBContext> options)
+        {
+            _repository = new GenericRepository<Movie>(new MovieDBContext(options));
+        }
+
         public int Add(Movie movie)
         {
             _repository.Add(movie);

@@ -1,13 +1,27 @@
 ﻿<Properties StartupConfiguration="{9F3E81A5-3E32-43C2-9A96-0FD01A761081}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/Repositories/GenericRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement.UnitTests/MovieControllerTests.cs">
     <Files>
-      <File FileName="MovieManagement/Controllers/MovieController.cs" Line="19" Column="1" />
-      <File FileName="MovieManagement/App_Start/WebApiConfig.cs" Line="4" Column="28" />
-      <File FileName="MovieManagement/Repositories/MovieRepository.cs" Line="20" Column="13" />
-      <File FileName="MovieManagement/Repositories/IRepository.cs" Line="14" Column="2" />
-      <File FileName="MovieManagement/Repositories/GenericRepository.cs" Line="33" Column="10" />
-      <File FileName="MovieManagement/Services/MovieService.cs" Line="10" Column="33" />
+      <File FileName="MovieManagement.UnitTests/MovieControllerTests.cs" Line="64" Column="15" />
+      <File FileName="MovieManagement.UnitTests/MovieServiceTests.cs" Line="77" Column="1" />
+      <File FileName="MovieManagement/Controllers/MovieController.cs" Line="16" Column="9" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MovieManagement" expanded="True">
+            <Node name="MovieManagement" expanded="True" />
+            <Node name="MovieManagement.UnitTests" expanded="True">
+              <Node name="MovieControllerTests.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="MovieManagement" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
