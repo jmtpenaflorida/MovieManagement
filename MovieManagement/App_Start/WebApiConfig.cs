@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Dependencies;
-using MovieManagement.Repository;
+using MovieManagement.Repositories;
 using MovieManagement.Services;
 using Unity;
 using Unity.Exceptions;
@@ -30,7 +30,7 @@ namespace MovieManagement
             );
 
             var container = new UnityContainer();
-            container.RegisterType<IRepository, MovieRepository>();
+            container.RegisterType<IMovieRepository, MovieRepository>();
             container.RegisterType<IMovieService, MovieService>();
 
             config.DependencyResolver = new UnityResolver(container);

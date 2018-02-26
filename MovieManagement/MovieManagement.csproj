@@ -203,6 +203,7 @@
     <Compile Include="Repositories\MovieRepository.cs" />
     <Compile Include="Services\MovieService.cs" />
     <Compile Include="Services\IMovieService.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using MovieManagement.Models;
 
-namespace MovieManagement.Repository
+namespace MovieManagement.Repositories
 {
-    public interface IRepository
+    public interface IMovieRepository
     {
         IEnumerable<Movie> Get();
         int Add(Movie movie);

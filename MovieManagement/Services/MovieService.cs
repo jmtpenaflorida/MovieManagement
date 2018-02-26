@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using MovieManagement.Models;
-using MovieManagement.Repository;
+using MovieManagement.Repositories;
 
 namespace MovieManagement.Services
 {
     public class MovieService : IMovieService
     {
-        private IRepository _repository;
+        private IMovieRepository _repository;
 
-        public MovieService(IRepository repository)
+        public MovieService(IMovieRepository repository)
         {
             _repository = repository;
         }

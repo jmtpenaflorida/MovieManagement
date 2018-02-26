@@ -1,30 +1,18 @@
 ﻿<Properties StartupConfiguration="{9F3E81A5-3E32-43C2-9A96-0FD01A761081}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/App_Start/WebApiConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieManagement/Repositories/GenericRepository.cs">
     <Files>
-      <File FileName="MovieManagement/Angular.html" Line="15" Column="25" />
-      <File FileName="MovieManagement/Vue.html" Line="16" Column="42" />
-      <File FileName="MovieManagement/Scripts/MovieController.js" Line="42" Column="54" />
-      <File FileName="MovieManagement/Controllers/MovieController.cs" Line="29" Column="1" />
-      <File FileName="MovieManagement/Scripts/Common.js" Line="8" Column="39" />
-      <File FileName="MovieManagement/Models/Movie.cs" Line="12" Column="35" />
-      <File FileName="MovieManagement/Content/main.css" Line="2" Column="1" />
-      <File FileName="MovieManagement/App_Start/WebApiConfig.cs" Line="32" Column="13" />
-      <File FileName="MovieManagement/Default.aspx" Line="13" Column="8" />
-      <File FileName="MovieManagement/Repositories/IRepository.cs" Line="13" Column="6" />
-      <File FileName="MovieManagement/Repositories/MovieRepository.cs" Line="14" Column="10" />
-      <File FileName="MovieManagement/Services/MovieService.cs" Line="18" Column="10" />
-      <File FileName="MovieManagement/Services/IMovieService.cs" Line="11" Column="24" />
+      <File FileName="MovieManagement/Controllers/MovieController.cs" Line="19" Column="1" />
+      <File FileName="MovieManagement/App_Start/WebApiConfig.cs" Line="4" Column="28" />
+      <File FileName="MovieManagement/Repositories/MovieRepository.cs" Line="20" Column="13" />
+      <File FileName="MovieManagement/Repositories/IRepository.cs" Line="14" Column="2" />
+      <File FileName="MovieManagement/Repositories/GenericRepository.cs" Line="33" Column="10" />
+      <File FileName="MovieManagement/Services/MovieService.cs" Line="10" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Controllers/MovieController.cs" relfile="MovieManagement/Controllers/MovieController.cs" line="19" column="1" />
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Controllers/MovieController.cs" relfile="MovieManagement/Controllers/MovieController.cs" line="29" column="1" />
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Controllers/MovieController.cs" relfile="MovieManagement/Controllers/MovieController.cs" line="34" column="1" />
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Controllers/MovieController.cs" relfile="MovieManagement/Controllers/MovieController.cs" line="40" column="1" />
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Controllers/MovieController.cs" relfile="MovieManagement/Controllers/MovieController.cs" line="15" column="39" />
-      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/App_Start/WebApiConfig.cs" relfile="MovieManagement/App_Start/WebApiConfig.cs" line="28" column="1" />
+      <Breakpoint file="/Users/jaypenaflorida/Projects/MovieManagement/MovieManagement/Startup.cs" relfile="MovieManagement/Startup.cs" line="22" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

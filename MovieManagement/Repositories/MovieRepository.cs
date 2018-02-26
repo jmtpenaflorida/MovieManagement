@@ -4,50 +4,40 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using MovieManagement.Models;
 
-namespace MovieManagement.Repository
+
+namespace MovieManagement.Repositories
 {
-    public class MovieRepository : IRepository
+    public class MovieRepository : IMovieRepository
     {
         private DbContextOptions<MovieDBContext> options;
+        private GenericRepository<Movie> _repository;
 
         public MovieRepository()
         {
             var builder = new DbContextOptionsBuilder<MovieDBContext>();
             builder.UseInMemoryDatabase("MovieDB");
             options = builder.Options;
+
+            _repository = new GenericRepository<Movie>(new MovieDBContext(options));
         }
 
-        public int Add(Movie movie)
+        int IMovieRepository.Add(Movie movie)
         {
-            using (var db = new MovieDBContext(options))
-            {
-                db.Movies.Add(movie);
-                db.SaveChanges();
-            }
+            _repository.Add(movie);
+            _repository.SaveChanges();
 
             return movie.Id;
         }
 
         public void Delete(int id)
         {
-            using (var db = new MovieDBContext(options))
-            {
-                var movie = db.Movies.FirstOrDefault<Movie>((m) => m.Id == id);
-
-                if (movie != null)
-                {
-                    db.Movies.Remove(movie);
-                    db.SaveChanges();
-                }
-            }
+            _repository.Delete(id);
+            _repository.SaveChanges();
         }
 
         public IEnumerable<Movie> Get()
         {
-            using (var db = new MovieDBContext(options))
-            {
-                return db.Movies.ToList();
-            }
+            return _repository.Get();
         }
     }
 }
